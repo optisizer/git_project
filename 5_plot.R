@@ -8,7 +8,7 @@ map <- map_data("world") %>%
 
 ggplot(storms, aes(x = long, y = lat)) +
   geom_polygon(aes(group = group), fill = "grey50", data = map) +
-  geom_path(aes(group = name), color = "black") +
+  geom_path(aes(group = name), color = "blue") +
   facet_wrap(~ year) + 
   theme_bw() + 
   coord_map(projection = "ortho", orientation = c(21, -60, 0))
